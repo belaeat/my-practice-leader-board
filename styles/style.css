@@ -8,11 +8,69 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* -------------------------
+        Navbar Styles
+---------------------------- */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #562EFF;
+}
+
+.navbar-container{
+    width: 870px;
+}
+
+.logo-and-menues {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* .logo-and-menues {
+    display: flex;
+    align-items: center;
+} */
+
+.logo-icon {
+    height: 50px;
+    width: 40px;
+    margin-right: 16px;
+}
+
+.logo-title {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    /* gap: 36px; */
+}
+
+.menu-title a, img{    
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu-title a {
+    margin-right: 36px;
+}
+
+
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .container {
@@ -141,12 +199,40 @@ latest course section
     padding: 6px;
 }
 
-@media screen and (max-width: 576px) {
-    
+/* -----------------------
+        Media Quries 
+--------------------------*/
+
+/* For mobaile devices */
+
+@media screen and (max-width: 688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog,
+    .course {
+        flex-direction: column;
+    }
 }
-@media screen and (min-width: 577px) and (max-width: 992px){
-    
-}
-@media screen and (min-width: 993px) {
-    
+
+/* For tablet devices */
+
+@media screen and (min-width: 689px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
